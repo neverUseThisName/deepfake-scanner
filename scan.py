@@ -230,7 +230,7 @@ def process(file):
 			for idx in indices:
 				id_preds[label].append(preds[idx])
 
-		preds = [id_strategy(preds) for preds in id_preds.values()]
+		preds = [id_strategy(ps) for ps in id_preds.values()]
 		if len(preds) == 0:
 			return 0.5
 
